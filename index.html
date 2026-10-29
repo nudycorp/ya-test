@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Торты на заказ в Варшаве — Сладкая мастерская</title>
+<meta name="description" content="Торты на заказ с доставкой. Свежий бисквит, натуральные сливки, оформление под ваш праздник.">
+<style>
+  :root {
+    --bg: #fff8f1;
+    --ink: #3a2418;
+    --muted: #7a6355;
+    --accent: #b8325a;
+    --accent-ink: #ffffff;
+    --card: #ffffff;
+    --line: #ead9c9;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.6;
+  }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 20px; }
+  header { padding: 18px 0; border-bottom: 1px solid var(--line); }
+  header .wrap { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .logo { font-weight: bold; font-size: 1.1rem; }
+  .phone { color: var(--ink); text-decoration: none; font-weight: bold; }
+  .phone:hover { color: var(--accent); }
+
+  .hero { padding: 64px 0 48px; }
+  h1 { font-size: clamp(2rem, 6vw, 3.2rem); line-height: 1.15; margin: 0 0 16px; max-width: 18ch; }
+  .lead { font-size: 1.15rem; color: var(--muted); max-width: 50ch; margin: 0 0 28px; }
+  .btn {
+    display: inline-block; border: 0; cursor: pointer;
+    background: var(--accent); color: var(--accent-ink);
+    font: inherit; font-weight: bold;
+    padding: 14px 28px; border-radius: 6px; text-decoration: none;
+  }
+  .btn:hover { filter: brightness(1.08); }
+  :focus-visible { outline: 3px solid var(--ink); outline-offset: 2px; }
+
+  section { padding: 40px 0; }
+  h2 { font-size: 1.6rem; margin: 0 0 20px; }
+  .facts { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
+  .fact { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 20px; }
+  .fact b { display: block; margin-bottom: 6px; }
+  .fact span { color: var(--muted); }
+
+  .prices { list-style: none; padding: 0; margin: 0; max-width: 520px; }
+  .prices li { display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+
+  form { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 24px; max-width: 480px; }
+  label { display: block; font-weight: bold; margin: 0 0 14px; }
+  input, textarea {
+    display: block; width: 100%; margin-top: 6px;
+    font: inherit; padding: 10px 12px;
+    border: 1px solid var(--line); border-radius: 6px; background: var(--bg); color: var(--ink);
+  }
+  .note { color: var(--muted); font-size: 0.9rem; margin: 12px 0 0; }
+
+  footer { padding: 28px 0 40px; color: var(--muted); font-size: 0.9rem; border-top: 1px solid var(--line); }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="logo">Сладкая мастерская</div>
+    <a class="phone" href="tel:+48000000000">+48 000 000 000</a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <div class="hero">
+      <h1>Торт к вашему празднику за 2 дня</h1>
+      <p class="lead">Печём на заказ из натуральных сливок и свежего бисквита. Привезём в день праздника в удобное для вас время.</p>
+      <a class="btn" href="#order">Заказать торт</a>
+    </div>
+
+    <section>
+      <h2>Почему к нам возвращаются</h2>
+      <div class="facts">
+        <div class="fact"><b>Без маргарина и заменителей</b><span>Только сливочное масло и сливки 33%.</span></div>
+        <div class="fact"><b>Цена видна сразу</b><span>Считаем по весу и дизайну, без доплат при выдаче.</span></div>
+        <div class="fact"><b>Бесплатная доставка от 2 кг</b><span>По городу, к назначенному часу.</span></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Сколько стоит</h2>
+      <ul class="prices">
+        <li><span>Бенто-торт, 500 г</span><span>от 90 zł</span></li>
+        <li><span>Торт на 8 человек, 2 кг</span><span>от 280 zł</span></li>
+        <li><span>Торт на праздник, 4 кг</span><span>от 520 zł</span></li>
+      </ul>
+    </section>
+
+    <section id="order">
+      <h2>Оставьте заявку</h2>
+      <form action="#" method="post">
+        <label>Ваше имя
+          <input type="text" name="name" required autocomplete="name">
+        </label>
+        <label>Телефон
+          <input type="tel" name="phone" required autocomplete="tel">
+        </label>
+        <label>Дата и пожелания
+          <textarea name="comment" rows="3"></textarea>
+        </label>
+        <button class="btn" type="submit">Отправить заявку</button>
+        <p class="note">Перезвоним в течение часа и уточним детали.</p>
+      </form>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">Сладкая мастерская. Учебный проект.</div>
+</footer>
+
+</body>
+</html>
